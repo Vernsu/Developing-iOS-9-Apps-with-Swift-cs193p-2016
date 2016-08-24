@@ -48,6 +48,9 @@
                             <constraint firstItem="ewW-AQ-8SG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cbO-R5-8FH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="ewW-AQ-8SG" id="kd8-XJ-BEU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
