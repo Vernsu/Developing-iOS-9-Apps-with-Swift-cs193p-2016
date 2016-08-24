@@ -12,14 +12,18 @@ class FaceView: UIView {
 
     
     var scale:CGFloat =  0.9
+    
     //因为没有初始化无法访问bounds，把它改成计算属性（computer property），注意，这里没有用get。如果你的计算属性只需要get，你就可以简单得这样写。
     var mouthCurvature: Double = 1.0 // 1 full smile, -1 full frown
+    
     private var skullRadius:CGFloat{
         return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
+    
     private var skullCenter:CGPoint{
         return CGPoint(x: bounds.midX , y: bounds.midY )
     }
+    
     //swift中设置常量的方式，我们创建一个结构体（struct）,运用static关键字。使用let。注意名称首字母大写。
     private struct Ratios {
         static let SkullRadiusToEyeOffset: CGFloat = 3
@@ -47,6 +51,7 @@ class FaceView: UIView {
         path.lineWidth = 5.0
         return path
     }
+    
     private func getEyeCenter(eye:Eye) -> CGPoint {
         let eyeOffset = skullRadius / Ratios.SkullRadiusToEyeOffset
         var eyeCenter = skullCenter
@@ -60,6 +65,7 @@ class FaceView: UIView {
         }
         return eyeCenter
     }
+    
     private func pathForEye(eye:Eye) -> UIBezierPath
     {
         let eyeRadius = skullRadius / Ratios.SkullRadiusToEyeRadius
@@ -99,7 +105,6 @@ class FaceView: UIView {
     
     override func drawRect(rect: CGRect) {
      
-
         UIColor.blueColor().set()
         pathForCircleCenteredAtPoint(skullCenter, withRadius: skullRadius).stroke()
         pathForEye(.Left).stroke()

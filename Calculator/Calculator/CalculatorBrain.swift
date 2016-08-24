@@ -7,18 +7,19 @@
 //
 
 import Foundation
-//放在这里是因为我想要一个全局函数，而不是类中的一个方法
 
 class CalculatorBrain{
     
     private var accumulator = 0.0
+    
     // AnyObject 的数组来存储信息，数组中的元素可能是 Double 类型，可能是一个 String 类型。我只需将操作数以 Double 的形式进行存储，将操作符以 String 的形式进行存储。这里使用的是 AnyObject 类型做为数组元素的类型,但是一个 Double 的类型， 它是一个Struct。 原本应该是没办法存入数组中的， 但是苹果的桥接技术做到了， 就是与 Objective-C 的桥接技术
-
     private var internalProgram = [AnyObject]()
+    
     func setOperand(operand:Double) {
         accumulator = operand
         internalProgram.append(operand)
     }
+    
     //值的类型为Operation
     var operations:Dictionary<String,Operation > = [
         //枚举关联值后，传入值即可
@@ -72,6 +73,7 @@ class CalculatorBrain{
             pending  = nil
         }
     }
+    
     private var pending:pendingBinaryOperationInfo?//pending只在执行二元运算时才有值，所以用可选型。如果我没有输入*等时，我希望他是nil
     //结构体
     //结构图非常像类，几乎是一样的，可以有变量，存储变量，计算变量，但是没有继承。结构体和类最大的区别是，结构体和枚举一样是按值传递的，类是按引用传递的。
@@ -86,6 +88,7 @@ class CalculatorBrain{
     
     //这里虽然我给他的类型为 AnyObject， 但是我同时也可以给他的类型为 PropertyList， 因为这个名字更加有可读性。其他人可以将其存在 NSUserDefaults 或者是其他的地方。这里就要用到一个 Swift 的一个特性， 叫做 typealias 。typealias 让你可以创建一个新的类型， 一个别名的类型，它实际上与你绑定的类型是等价的。这里创建一个叫做 PropertyList 的类型，并且它与AnyObject 等价。为什么我要创建这个类型呢？因为我希望这里的类型名称是 PropertyList,这本质上是一种文档化
     typealias  PropertyList = AnyObject
+    
     var program:PropertyList{
         //
         get{
@@ -108,11 +111,13 @@ class CalculatorBrain{
             }
         }
     }
+    
     func clear(){
         accumulator = 0.0
         pending = nil
         internalProgram.removeAll()//移除数组中所有元素
     }
+    
     var result:Double{
         get{
             return accumulator
