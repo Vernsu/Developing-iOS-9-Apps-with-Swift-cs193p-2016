@@ -42,6 +42,7 @@ struct FacialExpression
             return Mouth(rawValue: rawValue - 1) ?? .Frown
         }
         func happierMouth() -> Mouth {
+            //这里返回的是之前的case 后面一个
             return Mouth(rawValue: rawValue + 1) ?? .Smile
         }
     }

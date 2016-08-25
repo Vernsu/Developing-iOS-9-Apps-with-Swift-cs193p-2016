@@ -26,7 +26,16 @@ class FaceView: UIView {
     @IBInspectable
     var lineWidth:CGFloat = 5.0 { didSet{ setNeedsDisplay() } }
     
-    
+    func changeScale(recognizer:UIPinchGestureRecognizer){
+        switch recognizer.state {
+            //在switch中可以把不同case放到一起处理
+        case .Changed,.Ended:
+            scale *= recognizer.scale
+            //如果不重置scale，scale每次都是相对于初始条件的，重置以后，就是相对于上一次的。
+            recognizer.scale = 1.0
+        default:break
+        }
+    }
     
     //因为没有初始化无法访问bounds，把它改成计算属性（computer property），注意，这里没有用get。如果你的计算属性只需要get，你就可以简单得这样写。
     private var skullRadius:CGFloat{
