@@ -69,14 +69,17 @@ class FaceViewController: UIViewController {
     private let eyeBrowTilts = [FacialExpression.EyeBrows.Relaxed:0.5, .Furrowed:-0.5 ,.Normal:0.0  ]
     
     private func updateUI() {
-        switch expression.eyes{
-        case .Open: faceView.eyesOpen = true
-        case .Closed: faceView.eyesOpen = false
-        case .Squinting: faceView.eyesOpen = false
+        if faceView != nil{
+            switch expression.eyes{
+            case .Open: faceView.eyesOpen = true
+            case .Closed: faceView.eyesOpen = false
+            case .Squinting: faceView.eyesOpen = false
+            }
         }
+
         //字典通过key取值返回结果是optional，用?? 语法，在optional not set时设置默认值
-        faceView.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
-        faceView.eyeBrowTilt = eyeBrowTilts[expression.eyeBrows] ?? 0.0
+        faceView?.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
+        faceView?.eyeBrowTilt = eyeBrowTilts[expression.eyeBrows] ?? 0.0
     }
 
 }

@@ -14,6 +14,7 @@
 		5E91B5F21D6BF7CE00332612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E91B5F01D6BF7CE00332612 /* LaunchScreen.storyboard */; };
 		5E91B5FB1D6BFBF900332612 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E91B5FA1D6BFBF900332612 /* FaceView.swift */; };
 		5EE1611B1D6D6009001712F5 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE1611A1D6D6009001712F5 /* FacialExpression.swift */; };
+		5EE1611D1D700F55001712F5 /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE1611C1D700F55001712F5 /* EmotionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5E91B5F31D6BF7CE00332612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E91B5FA1D6BFBF900332612 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		5EE1611A1D6D6009001712F5 /* FacialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
+		5EE1611C1D700F55001712F5 /* EmotionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				5E91B5E91D6BF7CE00332612 /* FaceViewController.swift */,
 				5E91B5EB1D6BF7CE00332612 /* Main.storyboard */,
+				5EE1611C1D700F55001712F5 /* EmotionsViewController.swift */,
 				5E91B5FA1D6BFBF900332612 /* FaceView.swift */,
 				5EE1611A1D6D6009001712F5 /* FacialExpression.swift */,
 				5E91B5F91D6BF8C300332612 /* Supporting */,
@@ -151,6 +154,7 @@
 			files = (
 				5E91B5EA1D6BF7CE00332612 /* FaceViewController.swift in Sources */,
 				5EE1611B1D6D6009001712F5 /* FacialExpression.swift in Sources */,
+				5EE1611D1D700F55001712F5 /* EmotionsViewController.swift in Sources */,
 				5E91B5E81D6BF7CE00332612 /* AppDelegate.swift in Sources */,
 				5E91B5FB1D6BFBF900332612 /* FaceView.swift in Sources */,
 			);
