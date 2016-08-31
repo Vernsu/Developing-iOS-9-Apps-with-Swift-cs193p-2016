@@ -20,6 +20,11 @@ class CalculatorBrain{
         internalProgram.append(operand)
     }
     
+    func addUnaryOperation(symbol:String,operation:(Double) -> Double){
+        operations[symbol] = Operation.UnaryOperation(operation)
+    }
+    
+    
     //值的类型为Operation
     var operations:Dictionary<String,Operation > = [
         //枚举关联值后，传入值即可

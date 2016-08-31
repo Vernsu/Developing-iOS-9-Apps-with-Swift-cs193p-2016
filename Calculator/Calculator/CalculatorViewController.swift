@@ -8,6 +8,7 @@
 
 import UIKit
 
+var calculatorCount = 0
 class CalculatorViewController: UIViewController {
 
 
@@ -15,6 +16,22 @@ class CalculatorViewController: UIViewController {
     
     private var userIsInTheMiddleOfTyping = false
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        calculatorCount += 1
+        print("Loaded up a new Calculator (cout = \(calculatorCount))")
+        
+        brain.addUnaryOperation("Z"){[ weak weakSelf = self] in
+            weakSelf?.display.textColor = UIColor.redColor()
+            return sqrt($0)
+        }
+    }
+    //仅在对象离开堆区时，deinit 被调用，
+    deinit{
+        calculatorCount -= 1
+        print("Calculator left the heap (count = \(calculatorCount))")
+    }
 
     @IBAction private func touchDigit(sender: UIButton) {
         let digit = sender.currentTitle!
