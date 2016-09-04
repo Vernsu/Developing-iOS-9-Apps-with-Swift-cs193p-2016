@@ -20,6 +20,7 @@ class EmotionsViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var destinationvc = segue.destinationViewController
+        //注意这里的用法
         if let navcon = destinationvc as? UINavigationController{
             destinationvc = navcon.visibleViewController ?? destinationvc
         }
