@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageViewController: UIViewController {
+class ImageViewController: UIViewController , UIScrollViewDelegate{
 
     //注意，这是存储属性
     var imageURL:NSURL?{
@@ -29,7 +29,13 @@ class ImageViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!{
         didSet{
             scrollView.contentSize  = imageView.frame.size
+            scrollView.delegate = self
+            scrollView.maximumZoomScale = 1.0
+            scrollView.minimumZoomScale = 0.03
         }
+    }
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return imageView
     }
     
     private var imageView = UIImageView()
@@ -50,7 +56,6 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.addSubview(imageView)
-        imageURL = NSURL(string: DemoURL.Stanford)
         // Do any additional setup after loading the view.
     }
 
