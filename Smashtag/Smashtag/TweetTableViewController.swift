@@ -9,7 +9,7 @@
 import UIKit
 import Twitter
 
-class TweetTableViewController: UITableViewController {
+class TweetTableViewController: UITableViewController,UITextFieldDelegate {
 
     //这里定义一个嵌套数组，因为有多个section。这样正好可以和section 和 row的数据对应起来
     var tweets = [Array<Twitter.Tweet>](){
@@ -59,6 +59,11 @@ class TweetTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //此处将估算高度设置为storboard中cell原型的高度
+        tableView.estimatedRowHeight = tableView.rowHeight
+        //iOS8 系统中 rowHeight 的默认值已经设置成了 UITableViewAutomaticDimension，所以可以省略。
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         searchText = "#stanford"
 
     }
@@ -82,12 +87,29 @@ class TweetTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storboard.TweetCellIdentifier , forIndexPath: indexPath)
 
         let tweet = tweets[indexPath.section][indexPath.row]
-        cell.textLabel?.text = tweet.text
-        cell.detailTextLabel?.text = tweet.user.name
+        
+        
+        if let tweetCell = cell as? TweetTableViewCell{
+            tweetCell.tweet = tweet
+        }
+        
         return cell
     }
 
 
+    @IBOutlet weak var searchTextField: UITextField!{
+        didSet{
+            searchTextField.delegate = self
+            searchTextField.text = searchText
+        }
+
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        searchText = textField.text
+        return true
+    }
     /*
     // MARK: - Navigation
 
