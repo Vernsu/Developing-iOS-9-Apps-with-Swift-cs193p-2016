@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Xcode 7.0">
+    <entity name="Tweet" syncable="YES">
+        <attribute name="posted" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TwitterUser" syncable="YES"/>
+    <elements>
+        <element name="TwitterUser" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="Tweet" positionX="-54" positionY="-9" width="128" height="90"/>
+    </elements>
+</model>
