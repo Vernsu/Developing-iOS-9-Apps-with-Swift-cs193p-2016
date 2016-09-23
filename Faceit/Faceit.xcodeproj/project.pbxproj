@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E5CC9331D950FE4006ADF68 /* BlinkingFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CC9321D950FE4006ADF68 /* BlinkingFaceViewController.swift */; };
 		5E91B5E81D6BF7CE00332612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E91B5E71D6BF7CE00332612 /* AppDelegate.swift */; };
 		5E91B5EA1D6BF7CE00332612 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E91B5E91D6BF7CE00332612 /* FaceViewController.swift */; };
 		5E91B5ED1D6BF7CE00332612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E91B5EB1D6BF7CE00332612 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E5CC9321D950FE4006ADF68 /* BlinkingFaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkingFaceViewController.swift; sourceTree = "<group>"; };
 		5E91B5E41D6BF7CE00332612 /* Faceit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faceit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91B5E71D6BF7CE00332612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E91B5E91D6BF7CE00332612 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				5E91B5EB1D6BF7CE00332612 /* Main.storyboard */,
 				5EE1611C1D700F55001712F5 /* EmotionsViewController.swift */,
 				5EE161201D744B0A001712F5 /* VCL.swift */,
+				5E5CC9321D950FE4006ADF68 /* BlinkingFaceViewController.swift */,
 				5E91B5FA1D6BFBF900332612 /* FaceView.swift */,
 				5EE1611A1D6D6009001712F5 /* FacialExpression.swift */,
 				5E91B5F91D6BF8C300332612 /* Supporting */,
@@ -159,6 +162,7 @@
 				5EE1611B1D6D6009001712F5 /* FacialExpression.swift in Sources */,
 				5EE1611D1D700F55001712F5 /* EmotionsViewController.swift in Sources */,
 				5EE161211D744B0A001712F5 /* VCL.swift in Sources */,
+				5E5CC9331D950FE4006ADF68 /* BlinkingFaceViewController.swift in Sources */,
 				5E91B5E81D6BF7CE00332612 /* AppDelegate.swift in Sources */,
 				5E91B5FB1D6BFBF900332612 /* FaceView.swift in Sources */,
 			);
