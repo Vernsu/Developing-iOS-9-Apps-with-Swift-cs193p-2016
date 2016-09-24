@@ -13,7 +13,10 @@ class EyeView: UIView
     var lineWidth: CGFloat = 5.0 { didSet { setNeedsDisplay() } }
     var color: UIColor = UIColor.blueColor() { didSet { setNeedsDisplay() } }
 
+    //我们一般把东西放到didSet中，除非did已经太晚了。
+    //开头_,当我们既需要存储属性，又需要计算属性的时候这么做
     var _eyesOpen: Bool = true { didSet { setNeedsDisplay() } }
+    
     
     var eyesOpen: Bool {
         get {
@@ -24,7 +27,7 @@ class EyeView: UIView
                 self,
                 duration: 0.2,
                 options: [.TransitionFlipFromTop,.CurveLinear],
-                animations: {
+                animations: {//这儿有关于循环引用的问题吗？no，因为动画仅仅存在不到1秒。closure就失去作用了。
                     self._eyesOpen = newValue
                 },
                 completion: nil

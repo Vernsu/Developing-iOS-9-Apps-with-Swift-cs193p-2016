@@ -55,6 +55,46 @@ class FaceViewController: UIViewController {
         }
     }
 
+    private struct Animation{
+        static let ShakeAngle = CGFloat(M_PI/6)
+        static let ShakeDuration = 0.5
+    }
+    //摇头动画
+    @IBAction func headShake(sender: UITapGestureRecognizer) {
+        //向右摇
+        UIView.animateWithDuration(
+            Animation.ShakeDuration,
+            animations: { 
+                self.faceView.transform = CGAffineTransformRotate(self.faceView.transform, Animation.ShakeAngle )
+            },
+            completion: { finished in
+                if finished{
+                    //向左摇
+                    UIView.animateWithDuration(
+                        Animation.ShakeDuration,
+                        animations: {
+                            self.faceView.transform = CGAffineTransformRotate(self.faceView.transform, -Animation.ShakeAngle*2 )
+                        },completion: { finished in
+                            if finished{
+                                //回到中间
+                                UIView.animateWithDuration(
+                                    Animation.ShakeDuration,
+                                    animations: {
+                                        self.faceView.transform = CGAffineTransformRotate(self.faceView.transform, Animation.ShakeAngle )
+                                })
+                            }
+                        }
+                        
+                    )
+                    
+                }
+
+            }
+        
+        )
+        
+        
+    }
     
     
     func increaseHappiness() {
