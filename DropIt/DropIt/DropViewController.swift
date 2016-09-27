@@ -21,5 +21,13 @@ class DropViewController: UIViewController {
             gameView.addDrop()
         }
     }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        gameView.animating = true
+    }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        gameView.animating = false
+    }
 
 }

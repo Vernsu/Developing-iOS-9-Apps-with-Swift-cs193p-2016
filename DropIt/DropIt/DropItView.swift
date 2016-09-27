@@ -12,8 +12,30 @@ class DropItView: UIView {
 
     
     private let gravity = UIGravityBehavior()
+    //我们可以用closure来初始化一个变量(需要显示申明type，因为需要检测返回值是否匹配)
+    private let collider:UICollisionBehavior = {
+        let collider = UICollisionBehavior()
+        //自动的将reference view的bounds当做边界
+        collider.translatesReferenceBoundsIntoBoundary = true
+        return collider
+    }()
     //没有完全初始化之前不能访问self，所以要惰性
     private lazy var animator: UIDynamicAnimator =  UIDynamicAnimator(referenceView: self)
+  
+    
+    //动画开关,默认是关闭的，当view出现后才打开
+    var animating:Bool = false{
+        didSet{
+            if animating {
+                animator.addBehavior(gravity)
+                animator.addBehavior(collider)
+            }else{
+                animator.removeBehavior(gravity)
+                animator.addBehavior(collider)
+            }
+        }
+    }
+    
     //列数
     private let dropsPerRow = 10
     
@@ -31,6 +53,10 @@ class DropItView: UIView {
         drop.backgroundColor = UIColor.random
         
         addSubview(drop)
+        //如此，就有了加速度动画
+        gravity.addItem(drop)
+        collider.addItem(drop)
+        
         
     }
 }
