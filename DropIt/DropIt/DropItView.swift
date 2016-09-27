@@ -8,30 +8,29 @@
 
 import UIKit
 
-class DropItView: UIView {
+class DropItView: UIView , UIDynamicAnimatorDelegate{
 
     
-    private let gravity = UIGravityBehavior()
-    //我们可以用closure来初始化一个变量(需要显示申明type，因为需要检测返回值是否匹配)
-    private let collider:UICollisionBehavior = {
-        let collider = UICollisionBehavior()
-        //自动的将reference view的bounds当做边界
-        collider.translatesReferenceBoundsIntoBoundary = true
-        return collider
-    }()
+
     //没有完全初始化之前不能访问self，所以要惰性
-    private lazy var animator: UIDynamicAnimator =  UIDynamicAnimator(referenceView: self)
-  
+    private lazy var animator: UIDynamicAnimator = {
+        let animator = UIDynamicAnimator(referenceView: self)
+        animator.delegate = self
+        return animator
+    
+    }()
+
+    
+    private let dropBehavior = FallingObjectBehavior()
     
     //动画开关,默认是关闭的，当view出现后才打开
     var animating:Bool = false{
-        didSet{
+        didSet{ 
             if animating {
-                animator.addBehavior(gravity)
-                animator.addBehavior(collider)
+                animator.addBehavior(dropBehavior)
             }else{
-                animator.removeBehavior(gravity)
-                animator.addBehavior(collider)
+                animator.removeBehavior(dropBehavior)
+
             }
         }
     }
@@ -54,9 +53,44 @@ class DropItView: UIView {
         
         addSubview(drop)
         //如此，就有了加速度动画
-        gravity.addItem(drop)
-        collider.addItem(drop)
+        dropBehavior.addItem(drop)
         
         
+    }
+    
+    // MARK: Remove Completed Row
+    func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
+        removeCompletedRow()
+    }
+    
+    
+    private func removeCompletedRow()
+    {
+        var dropsToRemove = [UIView]()
+        
+        var hitTestRect = CGRect(origin: bounds.lowerLeft, size: dropSize)
+        repeat {
+            hitTestRect.origin.x = bounds.minX
+            hitTestRect.origin.y -= dropSize.height
+            var dropsTested = 0
+            var dropsFound = [UIView]()
+            while dropsTested < dropsPerRow {
+                if let hitView = hitTest(hitTestRect.mid) where hitView.superview == self {
+                    dropsFound.append(hitView)
+                } else {
+                    break
+                }
+                hitTestRect.origin.x += dropSize.width
+                dropsTested += 1
+            }
+            if dropsTested == dropsPerRow {
+                dropsToRemove += dropsFound
+            }
+        } while dropsToRemove.count == 0 && hitTestRect.origin.y > bounds.minY
+        
+        for drop in dropsToRemove {
+            dropBehavior.removeItem(drop)
+            drop.removeFromSuperview()
+        }
     }
 }
