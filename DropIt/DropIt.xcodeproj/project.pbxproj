@@ -15,6 +15,7 @@
 		5E5CC9581D97AA8A006ADF68 /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CC9571D97AA8A006ADF68 /* DropViewController.swift */; };
 		5E5CC95A1D98B3A5006ADF68 /* UIKit Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CC9591D98B3A5006ADF68 /* UIKit Extensions.swift */; };
 		5E5CC95C1D9AAD35006ADF68 /* FallingObjectBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CC95B1D9AAD35006ADF68 /* FallingObjectBehavior.swift */; };
+		5EF418401D9B55790090B00A /* NamedBezierPathsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4183F1D9B55790090B00A /* NamedBezierPathsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5E5CC9571D97AA8A006ADF68 /* DropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
 		5E5CC9591D98B3A5006ADF68 /* UIKit Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit Extensions.swift"; sourceTree = "<group>"; };
 		5E5CC95B1D9AAD35006ADF68 /* FallingObjectBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallingObjectBehavior.swift; sourceTree = "<group>"; };
+		5EF4183F1D9B55790090B00A /* NamedBezierPathsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedBezierPathsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5E5CC9591D98B3A5006ADF68 /* UIKit Extensions.swift */,
 				5E5CC9551D97AA35006ADF68 /* DropItView.swift */,
 				5E5CC95B1D9AAD35006ADF68 /* FallingObjectBehavior.swift */,
+				5EF4183F1D9B55790090B00A /* NamedBezierPathsView.swift */,
 				5E5CC9461D97A936006ADF68 /* Main.storyboard */,
 				5E5CC9541D97A977006ADF68 /* Sopporting Files */,
 			);
@@ -154,6 +157,7 @@
 			files = (
 				5E5CC9561D97AA35006ADF68 /* DropItView.swift in Sources */,
 				5E5CC9431D97A936006ADF68 /* AppDelegate.swift in Sources */,
+				5EF418401D9B55790090B00A /* NamedBezierPathsView.swift in Sources */,
 				5E5CC95C1D9AAD35006ADF68 /* FallingObjectBehavior.swift in Sources */,
 				5E5CC9581D97AA8A006ADF68 /* DropViewController.swift in Sources */,
 				5E5CC95A1D98B3A5006ADF68 /* UIKit Extensions.swift in Sources */,

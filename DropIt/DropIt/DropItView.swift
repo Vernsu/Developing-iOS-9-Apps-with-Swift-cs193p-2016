@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DropItView: UIView , UIDynamicAnimatorDelegate{
+class DropItView: NamedBezierPathsView , UIDynamicAnimatorDelegate{
 
     
 
@@ -44,6 +44,7 @@ class DropItView: UIView , UIDynamicAnimatorDelegate{
     }
     
     
+    private var lastDrop: UIView?
     func addDrop(){
         var frame = CGRect(origin: CGPoint.zero, size: dropSize)
         frame.origin.x = CGFloat.random(dropsPerRow) * dropSize.width
@@ -54,8 +55,61 @@ class DropItView: UIView , UIDynamicAnimatorDelegate{
         addSubview(drop)
         //如此，就有了加速度动画
         dropBehavior.addItem(drop)
+        lastDrop = drop
         
         
+    }
+    
+    
+    private var attachment: UIAttachmentBehavior?{
+        willSet{
+            if attachment != nil{
+                animator.removeBehavior(attachment!)
+                //删除字典中的元素
+                bezierPaths[PathsNames.Attachment] = nil
+            }
+        }
+        didSet{
+            if attachment != nil {
+                animator.addBehavior(attachment!)
+                attachment!.action = {[unowned self] in
+                    if let attachedDrop = self.attachment!.items.first as? UIView {
+                        self.bezierPaths[PathsNames.Attachment] = UIBezierPath.lineFrom(self.attachment!.anchorPoint, to: attachedDrop.center)
+                    }
+                }
+            }
+        }
+    }
+    
+    func grabDrop(recognizer:UIPanGestureRecognizer){
+        let gesturePoint = recognizer.locationInView(self)
+        switch recognizer.state {
+        case .Began:
+            //这里确保lastView没有被消掉
+            if let dropToAttachTo = lastDrop where dropToAttachTo.superview != nil{
+                attachment = UIAttachmentBehavior(item: dropToAttachTo, attachedToAnchor: gesturePoint)
+            }
+            lastDrop = nil
+        case .Changed:
+            attachment?.anchorPoint = gesturePoint
+        default:
+            attachment = nil
+        }
+    }
+    
+    
+    private struct PathsNames {
+        static let MiddleBarrier = "Middle Barrier"
+        static let Attachment = "Attachment"
+    }
+    
+    //需要在bounds已经存在后添加，并且当bounds变化时也变化
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let path = UIBezierPath(ovalInRect: CGRect(center: bounds.mid, size: dropSize))
+        dropBehavior.addBarrier(path, named: PathsNames.MiddleBarrier)
+        //贝塞尔曲线的绘制要放在drawRect中
+        bezierPaths[PathsNames.MiddleBarrier] = path
     }
     
     // MARK: Remove Completed Row

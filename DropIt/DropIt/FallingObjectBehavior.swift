@@ -21,7 +21,7 @@ class FallingObjectBehavior: UIDynamicBehavior {
     
     private let itemBehavior:UIDynamicItemBehavior = {
        let dib = UIDynamicItemBehavior()
-        dib.allowsRotation = false
+        dib.allowsRotation = true
         //elasticity为1，代表碰撞（Collision）没有能量损失，相互反弹
         dib.elasticity = 0.75
         return dib
