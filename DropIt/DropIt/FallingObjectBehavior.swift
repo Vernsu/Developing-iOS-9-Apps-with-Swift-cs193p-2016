@@ -10,7 +10,7 @@ import UIKit
 
 class FallingObjectBehavior: UIDynamicBehavior {
 
-    private let gravity = UIGravityBehavior()
+    let gravity = UIGravityBehavior()
     //我们可以用closure来初始化一个变量(需要显示申明type，因为需要检测返回值是否匹配)
     private let collider:UICollisionBehavior = {
         let collider = UICollisionBehavior()

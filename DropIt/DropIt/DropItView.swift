@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreMotion
 class DropItView: NamedBezierPathsView , UIDynamicAnimatorDelegate{
 
     
@@ -28,10 +28,50 @@ class DropItView: NamedBezierPathsView , UIDynamicAnimatorDelegate{
         didSet{ 
             if animating {
                 animator.addBehavior(dropBehavior)
+                updateRealGravity()
             }else{
                 animator.removeBehavior(dropBehavior)
 
             }
+        }
+    }
+    
+    var realGravitt: Bool = false{
+        didSet{
+            updateRealGravity()
+        }
+    }
+    
+    private let motionManager = CMMotionManager()
+    private func updateRealGravity(){
+        if realGravitt{
+            if motionManager.accelerometerAvailable && !motionManager.accelerometerActive{
+                motionManager.accelerometerUpdateInterval = 0
+                motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue())
+                {[unowned self] (data, error) in
+                    if self.dropBehavior.dynamicAnimator != nil{
+                        if var dx = data?.acceleration.x, var dy = data?.acceleration.y{
+                            switch UIDevice.currentDevice().orientation{
+                            case .Portrait: dy = -dy
+                            case .PortraitUpsideDown: break
+                            case .LandscapeRight: swap(&dx,&dy)
+                            case .LandscapeLeft: swap(&dx, &dy); dy = -dy
+                            default:dx = 0;dy = 0;
+                            }
+                            
+                            
+                            
+                            
+                            self.dropBehavior.gravity.gravityDirection = CGVector(dx:dx , dy: dy)
+                        }
+                    }else{
+                        self.motionManager.stopAccelerometerUpdates()
+                    }
+                }
+
+            }
+        }else{
+            motionManager.stopAccelerometerUpdates()
         }
     }
     
