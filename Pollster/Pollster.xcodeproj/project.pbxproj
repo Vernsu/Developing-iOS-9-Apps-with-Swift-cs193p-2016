@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EDB15461DB600BB006E74DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB15451DB600BB006E74DA /* AppDelegate.swift */; };
+		5EDB154B1DB600BB006E74DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EDB15491DB600BB006E74DA /* Main.storyboard */; };
+		5EDB154D1DB600BB006E74DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EDB154C1DB600BB006E74DA /* Assets.xcassets */; };
+		5EDB15501DB600BB006E74DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EDB154E1DB600BB006E74DA /* LaunchScreen.storyboard */; };
+		5EDB15591DB601FA006E74DA /* CloudKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB15581DB601FA006E74DA /* CloudKitExtensions.swift */; };
+		5EDB155C1DB60210006E74DA /* QandAAccessoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB155A1DB60210006E74DA /* QandAAccessoryTableViewController.swift */; };
+		5EDB155D1DB60210006E74DA /* QandATableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB155B1DB60210006E74DA /* QandATableViewController.swift */; };
+		5EDB155F1DB6021E006E74DA /* TextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB155E1DB6021E006E74DA /* TextTableViewController.swift */; };
+		5EDB15611DB60683006E74DA /* CloudQandATableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB15601DB60683006E74DA /* CloudQandATableViewController.swift */; };
+		5EDB15641DB7C58D006E74DA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB15631DB7C58D006E74DA /* CloudKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5EDB15421DB600BB006E74DA /* Pollster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pollster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EDB15451DB600BB006E74DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5EDB154A1DB600BB006E74DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EDB154C1DB600BB006E74DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EDB154F1DB600BB006E74DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EDB15511DB600BB006E74DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EDB15581DB601FA006E74DA /* CloudKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitExtensions.swift; sourceTree = "<group>"; };
+		5EDB155A1DB60210006E74DA /* QandAAccessoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QandAAccessoryTableViewController.swift; sourceTree = "<group>"; };
+		5EDB155B1DB60210006E74DA /* QandATableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QandATableViewController.swift; sourceTree = "<group>"; };
+		5EDB155E1DB6021E006E74DA /* TextTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewController.swift; sourceTree = "<group>"; };
+		5EDB15601DB60683006E74DA /* CloudQandATableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudQandATableViewController.swift; sourceTree = "<group>"; };
+		5EDB15621DB7C4A8006E74DA /* Pollster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Pollster.entitlements; sourceTree = "<group>"; };
+		5EDB15631DB7C58D006E74DA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EDB153F1DB600BB006E74DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDB15641DB7C58D006E74DA /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EDB15391DB600BB006E74DA = {
+			isa = PBXGroup;
+			children = (
+				5EDB15631DB7C58D006E74DA /* CloudKit.framework */,
+				5EDB15441DB600BB006E74DA /* Pollster */,
+				5EDB15431DB600BB006E74DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EDB15431DB600BB006E74DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB15421DB600BB006E74DA /* Pollster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EDB15441DB600BB006E74DA /* Pollster */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB15621DB7C4A8006E74DA /* Pollster.entitlements */,
+				5EDB15451DB600BB006E74DA /* AppDelegate.swift */,
+				5EDB15491DB600BB006E74DA /* Main.storyboard */,
+				5EDB15601DB60683006E74DA /* CloudQandATableViewController.swift */,
+				5EDB15571DB60107006E74DA /* Supporting Files */,
+			);
+			path = Pollster;
+			sourceTree = "<group>";
+		};
+		5EDB15571DB60107006E74DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB15581DB601FA006E74DA /* CloudKitExtensions.swift */,
+				5EDB155A1DB60210006E74DA /* QandAAccessoryTableViewController.swift */,
+				5EDB155E1DB6021E006E74DA /* TextTableViewController.swift */,
+				5EDB155B1DB60210006E74DA /* QandATableViewController.swift */,
+				5EDB154C1DB600BB006E74DA /* Assets.xcassets */,
+				5EDB154E1DB600BB006E74DA /* LaunchScreen.storyboard */,
+				5EDB15511DB600BB006E74DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EDB15411DB600BB006E74DA /* Pollster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EDB15541DB600BB006E74DA /* Build configuration list for PBXNativeTarget "Pollster" */;
+			buildPhases = (
+				5EDB153E1DB600BB006E74DA /* Sources */,
+				5EDB153F1DB600BB006E74DA /* Frameworks */,
+				5EDB15401DB600BB006E74DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pollster;
+			productName = Pollster;
+			productReference = 5EDB15421DB600BB006E74DA /* Pollster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EDB153A1DB600BB006E74DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Vernsu;
+				TargetAttributes = {
+					5EDB15411DB600BB006E74DA = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = YWVDS3V6NE;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 5EDB153D1DB600BB006E74DA /* Build configuration list for PBXProject "Pollster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EDB15391DB600BB006E74DA;
+			productRefGroup = 5EDB15431DB600BB006E74DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EDB15411DB600BB006E74DA /* Pollster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EDB15401DB600BB006E74DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDB15501DB600BB006E74DA /* LaunchScreen.storyboard in Resources */,
+				5EDB154D1DB600BB006E74DA /* Assets.xcassets in Resources */,
+				5EDB154B1DB600BB006E74DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EDB153E1DB600BB006E74DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDB155F1DB6021E006E74DA /* TextTableViewController.swift in Sources */,
+				5EDB15611DB60683006E74DA /* CloudQandATableViewController.swift in Sources */,
+				5EDB15591DB601FA006E74DA /* CloudKitExtensions.swift in Sources */,
+				5EDB155D1DB60210006E74DA /* QandATableViewController.swift in Sources */,
+				5EDB15461DB600BB006E74DA /* AppDelegate.swift in Sources */,
+				5EDB155C1DB60210006E74DA /* QandAAccessoryTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5EDB15491DB600BB006E74DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EDB154A1DB600BB006E74DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EDB154E1DB600BB006E74DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EDB154F1DB600BB006E74DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EDB15521DB600BB006E74DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5EDB15531DB600BB006E74DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EDB15551DB600BB006E74DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Pollster/Pollster.entitlements;
+				INFOPLIST_FILE = Pollster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vernsu.diagon.me.Pollster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5EDB15561DB600BB006E74DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Pollster/Pollster.entitlements;
+				INFOPLIST_FILE = Pollster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vernsu.diagon.me.Pollster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EDB153D1DB600BB006E74DA /* Build configuration list for PBXProject "Pollster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EDB15521DB600BB006E74DA /* Debug */,
+				5EDB15531DB600BB006E74DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EDB15541DB600BB006E74DA /* Build configuration list for PBXNativeTarget "Pollster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EDB15551DB600BB006E74DA /* Debug */,
+				5EDB15561DB600BB006E74DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EDB153A1DB600BB006E74DA /* Project object */;
+}
