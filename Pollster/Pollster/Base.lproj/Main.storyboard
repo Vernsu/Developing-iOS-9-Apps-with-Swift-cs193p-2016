@@ -5,6 +5,54 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--All Qand As Table View Controller-->
+        <scene sceneID="OVa-Pq-2c1">
+            <objects>
+                <tableViewController id="UH8-5p-Z7G" customClass="AllQandAsTableViewController" customModule="Pollster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GYJ-VB-cOI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QandA Cell" textLabel="25Y-lT-FNi" style="IBUITableViewCellStyleDefault" id="5fY-L0-Xpw">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5fY-L0-Xpw" id="oGy-f6-cbC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="25Y-lT-FNi">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="uWs-v2-gii" kind="show" identifier="Show QandA" id="Rmd-vH-oWj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UH8-5p-Z7G" id="9Pv-Nr-iwF"/>
+                            <outlet property="delegate" destination="UH8-5p-Z7G" id="4dM-wy-uz2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="krJ-Pr-oSf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qPX-dK-YX1">
+                            <connections>
+                                <segue destination="uWs-v2-gii" kind="show" identifier="Show QandA" id="3RX-z5-3lY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pT-8W-OXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="179"/>
+        </scene>
         <!--Cloud QandA Table View Controller-->
         <scene sceneID="TN9-Kv-mkA">
             <objects>
@@ -33,7 +81,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iNk-xx-iak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835.5" y="270.5"/>
+            <point key="canvasLocation" x="1305.5" y="178.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BpJ-rf-iBP">
@@ -47,12 +95,15 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="uWs-v2-gii" kind="relationship" relationship="rootViewController" id="4xf-rH-n5v"/>
+                        <segue destination="UH8-5p-Z7G" kind="relationship" relationship="rootViewController" id="UdW-mT-NKd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycv-Fw-NFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="271"/>
+            <point key="canvasLocation" x="280.5" y="260.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rmd-vH-oWj"/>
+    </inferredMetricsTieBreakers>
 </document>

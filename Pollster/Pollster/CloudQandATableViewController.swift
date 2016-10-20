@@ -72,10 +72,6 @@ class CloudQandATableViewController: QandATableViewController {
         super.textViewDidEndEditing(textView)
         iCloudUpdate()
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        ckQandARecord  = CKRecord(recordType: Cloud.Entity.QandA)
-        
-    }
+ 
 
 }

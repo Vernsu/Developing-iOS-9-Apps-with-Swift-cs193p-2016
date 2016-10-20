@@ -17,6 +17,7 @@
 		5EDB155F1DB6021E006E74DA /* TextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB155E1DB6021E006E74DA /* TextTableViewController.swift */; };
 		5EDB15611DB60683006E74DA /* CloudQandATableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB15601DB60683006E74DA /* CloudQandATableViewController.swift */; };
 		5EDB15641DB7C58D006E74DA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB15631DB7C58D006E74DA /* CloudKit.framework */; };
+		5EDB15661DB87B52006E74DA /* AllQandAsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB15651DB87B52006E74DA /* AllQandAsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		5EDB15601DB60683006E74DA /* CloudQandATableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudQandATableViewController.swift; sourceTree = "<group>"; };
 		5EDB15621DB7C4A8006E74DA /* Pollster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Pollster.entitlements; sourceTree = "<group>"; };
 		5EDB15631DB7C58D006E74DA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		5EDB15651DB87B52006E74DA /* AllQandAsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllQandAsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				5EDB15451DB600BB006E74DA /* AppDelegate.swift */,
 				5EDB15491DB600BB006E74DA /* Main.storyboard */,
 				5EDB15601DB60683006E74DA /* CloudQandATableViewController.swift */,
+				5EDB15651DB87B52006E74DA /* AllQandAsTableViewController.swift */,
 				5EDB15571DB60107006E74DA /* Supporting Files */,
 			);
 			path = Pollster;
@@ -172,6 +175,7 @@
 				5EDB15591DB601FA006E74DA /* CloudKitExtensions.swift in Sources */,
 				5EDB155D1DB60210006E74DA /* QandATableViewController.swift in Sources */,
 				5EDB15461DB600BB006E74DA /* AppDelegate.swift in Sources */,
+				5EDB15661DB87B52006E74DA /* AllQandAsTableViewController.swift in Sources */,
 				5EDB155C1DB60210006E74DA /* QandAAccessoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
