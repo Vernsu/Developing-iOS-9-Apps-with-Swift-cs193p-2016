@@ -14,6 +14,8 @@
 		5EDB157E1DBF625C006E74DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EDB157C1DBF625C006E74DA /* LaunchScreen.storyboard */; };
 		5EDB15871DBF6852006E74DA /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB15861DBF6852006E74DA /* GPX.swift */; };
 		5EDB15891DBF6C35006E74DA /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB15881DBF6C35006E74DA /* MKGPX.swift */; };
+		5EDB158B1DC04E64006E74DA /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB158A1DC04E64006E74DA /* ImageViewController.swift */; };
+		5EDB158F1DC0791A006E74DA /* EditWaypointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB158E1DC0791A006E74DA /* EditWaypointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		5EDB157F1DBF625C006E74DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EDB15861DBF6852006E74DA /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
 		5EDB15881DBF6C35006E74DA /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKGPX.swift; sourceTree = "<group>"; };
+		5EDB158A1DC04E64006E74DA /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		5EDB158E1DC0791A006E74DA /* EditWaypointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWaypointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			children = (
 				5EDB15851DBF6279006E74DA /* Suppprting Files */,
 				5EDB15751DBF625C006E74DA /* GPXViewController.swift */,
+				5EDB158A1DC04E64006E74DA /* ImageViewController.swift */,
+				5EDB158E1DC0791A006E74DA /* EditWaypointViewController.swift */,
 				5EDB15881DBF6C35006E74DA /* MKGPX.swift */,
 				5EDB15771DBF625C006E74DA /* Main.storyboard */,
 				5EDB15861DBF6852006E74DA /* GPX.swift */,
@@ -151,6 +157,8 @@
 			files = (
 				5EDB15761DBF625C006E74DA /* GPXViewController.swift in Sources */,
 				5EDB15891DBF6C35006E74DA /* MKGPX.swift in Sources */,
+				5EDB158F1DC0791A006E74DA /* EditWaypointViewController.swift in Sources */,
+				5EDB158B1DC04E64006E74DA /* ImageViewController.swift in Sources */,
 				5EDB15741DBF625C006E74DA /* AppDelegate.swift in Sources */,
 				5EDB15871DBF6852006E74DA /* GPX.swift in Sources */,
 			);
@@ -268,6 +276,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Trax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vernsu.diagon.me.Trax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -279,6 +288,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Trax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vernsu.diagon.me.Trax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +314,7 @@
 				5EDB15841DBF625C006E74DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
